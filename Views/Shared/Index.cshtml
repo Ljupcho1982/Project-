@@ -1,0 +1,61 @@
+﻿
+@model IEnumerable<RazorPizzeria.Models.PizzaOrder>
+@{
+}
+
+<h3>Orders</h3>
+
+<hr/>
+
+<table class="table">
+
+    <thead>
+<th>
+
+    id
+</th>
+
+<th>
+
+    Pizza Name
+</th>
+
+<th>
+    Price
+
+</th>
+
+
+</thead>
+   
+
+    <tbody>
+
+        @foreach(var order in Model)
+        {
+           <tr>
+               <td>
+                @order.Id
+
+
+               </td>
+
+
+               <td>
+
+                   @order.PizzaName
+               </td>
+               <td>
+                   @order.BasePrice
+
+
+               </td>
+
+           </tr>  
+        
+       
+        }
+       
+ 
+    </tbody>
+</table>
